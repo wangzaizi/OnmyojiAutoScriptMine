@@ -89,7 +89,7 @@ class ScriptTask(GameUi, DelegationAssets):
                 continue
             if self.appear_then_click(self.I_D_START, interval=1.8):
                 continue
-        # ui_click(self.C_D_5, self.I_D_SELECT_5)
+        ui_click(self.C_D_5, self.I_D_SELECT_5)
         # self.ui_click_until_disappear(self.I_D_START)
 
     def check_reward(self):
