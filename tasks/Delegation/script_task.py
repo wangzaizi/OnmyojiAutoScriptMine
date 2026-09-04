@@ -79,17 +79,15 @@ class ScriptTask(GameUi, DelegationAssets):
         ui_click(self.C_D_2, self.I_D_SELECT_2)
         ui_click(self.C_D_3, self.I_D_SELECT_3)
         ui_click(self.C_D_4, self.I_D_SELECT_4)
+        ui_click(self.C_D_5, self.I_D_SELECT_5)
         # 委派开始
         logger.info(f'Delegation: {name} start')
         while 1:
             self.screenshot()
             if not self.appear(self.I_D_START):
                 break
-            if self.click(self.C_D_5, interval=0.8):
-                continue
             if self.appear_then_click(self.I_D_START, interval=1.8):
                 continue
-        ui_click(self.C_D_5, self.I_D_SELECT_5)
         # self.ui_click_until_disappear(self.I_D_START)
 
     def check_reward(self):
